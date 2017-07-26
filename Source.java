@@ -15,11 +15,20 @@ public class Source {
 	
 	public static int decision(int n) {
 		int n1,n2,n3;
-		int smallestInt;
 		
-		n1 = movesLeft(n, 2);
+		n1 = movesLeft(n, 1);
 		n2 = movesLeft(n, 2);
+		n3 = movesLeft(n, 4);
 		
+		if(n1 < n2 && n1 < n3) {
+			return 1;
+		}
+		else if(n2 < n1 && n2 < n3) {
+			return 2;	
+		}
+		else {
+			return 4;
+		}
 	}
 	
 	public static void main(String[] args) {
